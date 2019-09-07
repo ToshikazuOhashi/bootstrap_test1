@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+    		.new_inp{
+    			height:35px;
+    			text-align:center;
+    			 border-left: 1px solid #fff;
+    			}
+    		.pro_pic_inp{
+    			background-color:#555;
+    			color:#fff; 
+    			height:100px;
+    			padding:40px;
+    			margin-bottom: 1px;
+    		}
+    		.tr_pic_inp{
+    			background-color:#555;
+    			color:#fff; 
+    			height:100px;
+    			padding:40px;
+    			margin-bottom: 1px;
+    		}
+		    .new_post{
+    			height:35px;
+    			text-align:center;
+    			border-left: 1px solid #fff;
+    		} 
+    		#n_post{margin-top: 3px;}   			
+    			
+    	    .orange_1{background-color:RGB(255,100,0);}
+    	    .orange_2{background-color:RGB(255,120,0);}
+    	    .orange_3{background-color:RGB(255,140,0);}
+    	    .orange_4{background-color:RGB(255,160,0);}
+    	    .orange_5{background-color:RGB(255,180,0);}
+    	    .orange_6{background-color:RGB(255,200,0);}
+    	    .green_7{background-color:RGB(0,255,0);}
+    	    .green_6{background-color:RGB(0,240,0);}
+    	    .green_5{background-color:RGB(0,225,0);}
+    	    .green_4{background-color:RGB(0,210,0);}
+    	    .green_3{background-color:RGB(0,195,0);}
+    	    .green_2{background-color:RGB(0,180,0);}
+    	    .green_1{background-color:RGB(0,165,0);}
+    	    span{padding:10px;border-left: 1px solid #fff;  }
+    	    input{ border: 0px ;}
+    	    .container{
+    	   	font-weight:bolder;
+    	   	font-size:17%;
+    	   	width:99%;
+			}
+
+			
+    	    .menu_it{
+    	  		height:40px;
+    	  		background-color:#000;
+    	  		padding:10px;
+    	  		color: #fff;
+    	  		margin-bottom: 5px;
+    	  		text-align:center;
+    	  		border-left: 1px solid #fff;
+    	  		display: inline-block;
+    	  		
+    	  	}
+    	    .posted{margin-top:10px;margin-bottom:10px;
+    	    }
+
+    	    .posted_pic{
+    	  		height:33vw;
+    	  		background-color:#666;
+    	  		color:#fff;
+    	  		text-align:center;
+    	  		margin-top:5px
+    	    }
+    	    .posted_det{margin-right:0px;margin-left:0px;padding:0px;border-left: 1px solid #fff;}
+    	    .posted_date{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+    	    .posted_name{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+    	    .posted_iin{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+
+    	    .adv{
+    	    	background-color:#bbb;
+    	    	color:#fff; 
+    	        height:60px;
+    		    margin-left: 1px;
+    		    margin-top: 10px;
+    		    margin-bottom: 10px;
+    		}
+
+    		.coments{
+    	  		height:100vw;
+    	  		background-color:#eee;
+    	  		margin-top: 5px;
+    	  	}
+    	    .sarc{
+    	  		border: 2px solid #000;
+    	  		margin-top:5px
+
+    	    }
+    	    .main_pic{
+    	    	height:99vw;
+    	    	background-color:#666;
+    	  		color:#fff;
+    	  		text-align:center;
+    	  		margin-top:5px;
+    	    }
+
+			.main_date{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+    	    .main_name{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+    	    .main_iin{height:30px;text-align:center;padding:1px;color:#fff;background-color:#999;margin-top: 1px;}
+    	    
+    	    .end{margin-top: 10px;}
+    	    
+    	   header{padding-bottom:0.3px;background-color:#fff;}
+    	   
+    	   #coment{background-color:#fff;
+    	    	color:#000;
+
+    	        height:60px;
+    		    margin-left: 1px;
+    		    margin-top: 10px;
+    		    margin-bottom: 10px;
+    		    border: 2px solid #000;
+    		}
+
+    	 
+	</style>
+</head>
+<body>
+    <div class="container">
+    	<h1>昆虫を探せ（仮）</h1>
+
+
+        	<header class="menu row sticky-top"><div id="btn_new_mem" class="menu_it col-2">新規入会</div><div id="btn_new_post" class="menu_it col-2">新規投稿</div><div id="btn_new_posted" class="menu_it col-2">最新投稿</div><div id="btn_osiete" class="menu_it col-2">教えて！</div><div id="btn_sarch"  class="menu_it col-2">検索</div><div id="btn_coment"  class="menu_it col-2">投稿にコメント</div></header>
+        <form id="n_mem">
+        	<div class="row"><div class="new_inp pro_pic_inp col-12">プロフィール写真を選ぶ。</div></div>
+        	<div class="new_inp row orange_1"><span class="col-3">公開</span><input type="text" placeholder="name" class="new_inp col-9 orange_1"></div> 
+        	<div class="new_inp row orange_2"><span class="col-3">非公開</span><input type="text" placeholder="mail adress" class="new_inp col-9 orange_2"></div>
+        	<div class="new_inp row orange_3"><input class="new_inp col-3 orange_3" type="text" placeholder="公開・非公開"><input type="text" placeholder="性別" class="new_inp col-9 orange_3"></div>
+        	<div class="new_inp row orange_4"><input class="new_inp col-3 orange_4" type="text" placeholder="公開・非公開"><input type="text" placeholder="年齢" class="new_inp col-9 orange_4"></div>
+	        <div class="new_inp row orange_5"><span class="col-3">公開</span><input type="text" placeholder="住所［都道府県］" class="new_inp col-9 orange_5"></div>
+	        <div class="new_inp row orange_6"><span class="col-3">非公開</span><input type="text" placeholder="自己紹介" class="new_inp col-9 orange_6"></div>
+        </form>
+        <form id="n_post">
+        	<div class="row"><div class="new_inp tr_pic_inp col-12">投稿写真を選ぶ。</div></div>      	
+            <div class="new_post row green_7"><input class="new_post col-3 green_7" type="text" placeholder="公開・非公開"><input type="text" placeholder="場所" class="new_post col-9 green_7"></div>
+            <div class="new_post row green_6"><span class="col-3">公開</span><input type="text" placeholder="見付けた日" class="new_post col-9 green_6"></div>
+			<div class="new_post row green_5"><span class="col-3">公開</span><input type="text" placeholder="昆虫の名前" class="new_post col-9 green_5"></div>
+			<div class="new_post row green_4"><span class="col-3">公開</span><input type="text" placeholder="天気" class="new_post col-9 green_4"></div><!--自動入力-->
+        	<div class="new_post row green_3"><span class="col-3">公開</span><input type="text" placeholder="説明" class="new_post col-9 green_3"></div>
+        	<div class="new_post row green_2"><span class="col-3">公開</span><input type="text" placeholder="いいね！" class="new_post col-9 green_2"></div><!--自動入力-->
+        	<div class="new_post row green_1"><span class="col-3">公開</span><input type="text" placeholder="コメント" class="new_post col-9 green_1"></div><!--自動入力-->
+        </form>
+        	<div id="adv_shp" class="row"><div class="adv col-12">アプリを紹介した業者から会員に対する広告</div></div> 
+        	 <form id="sarch" class="sarc_det row">
+        			<input class="sarc sarc_date col-5" type="text" value="投稿時期">
+        			<input class="sarc sarc_name col-5" type="text" value="投稿者">
+        			<input class="sarc sarc_name col-5" t col-3ype="text" value="場所">
+        			<input class="sarc sarc_name col-5" type="text" value="昆虫の名前">
+        		    </form>
+
+		<div id="main">
+        			<div class="main_det row">
+        			<div class="main_pic col-12">pic1</div><div class="main_date col-12">2019/05/15</div><div class="main_name col-12">大橋俊和</div><div class="main_iin col-12">いいね！15件</div><div class="col-12 coments">コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>コメント<br>(投稿者)<br>---------------------<br><br>
+					</div>
+        		    </div> 
+        </div>
+
+        <div class="row"><textarea id="coment" class="col-12">ここにコメントを入力！
+        				</textarea>
+        </div>
+
+        	<div id="posted" class="posted row">
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">2019/05/15</div><div class="posted_name">大橋俊和</div><div class="posted_iin">いいね！15件</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        		<div class="posted_det col-4">
+        			<div class="posted_pic">pic1</div><div class="posted_date">1</div><div class="posted_name">1</div><div class="posted_iin">1</div>
+        		</div>
+        </div>
+        		<div id="adv_mem" class="row"><div class="adv col-12">投稿した人が収益を受けられる広告</div></div> 
+
+        <div class="end row"><div id="btn_gaiyou" class="menu_it col-3">会社概要</div><div class="menu_it col-3"></div><div class="menu_it col-3"></div><div class="menu_it col-3"></div></div>
+        		
+<script src="script.js"></script>
+
+    </div>
+</body>
+</html>
